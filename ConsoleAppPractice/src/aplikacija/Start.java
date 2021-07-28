@@ -9,17 +9,22 @@ public class Start {
 	
 	public Start() {
 		korisnici = new ArrayList<>();
-		izbornik();
+		glavniIzbornik();
 	}
 	
-	private void izbornik() {
+	private void glavniIzbornik() {
 		System.out.println("****** ConsoleApp ******");
 		System.out.println(" IZBORNIK ");
-		System.out.println(" 1. Racuni");
-		System.out.println(" 2. Korisnici");
-		System.out.println(" 3. Djelaznici");
-		System.out.println(" 4. Proizvodi");
+		System.out.println(" 1. Djelatnici");
+		System.out.println(" 2. Racuni");
+		System.out.println(" 3. Proizvod");
+		System.out.println(" 4. Korisnici");
 		System.out.println(" 5. Izlaz iz programa");
+		
+		ucitajGlavnuAkciju();
+	}
+
+	private void ucitajGlavnuAkciju() {
 		
 		
 	}
