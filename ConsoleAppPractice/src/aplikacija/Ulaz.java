@@ -16,6 +16,8 @@ public class Ulaz {
 			try {
 				broj = Integer.parseInt(ulaz.nextLine());
 				if (broj<min  || broj>max) {
+					System.out.println("Broj ne smije biti manji od" + min
+							+ " ili veći od " + max);
 					continue;
 				}
 				break;

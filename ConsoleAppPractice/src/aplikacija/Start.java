@@ -25,7 +25,7 @@ public class Start {
 	}
 
 	private void ucitajGlavnuAkciju() {
-		switch (Ulaz.ucitajInt("Odaberite stavku: ", "Greška unosa", 1, 5)) {
+		switch (Ulaz.ucitajInt("Odaberite stavku: ", "Niste unijeli cijeli broj", 1, 5)) {
 		case 1: 
 			smjerIzbornik();
 			break;
