@@ -31,7 +31,7 @@ public class Start {
 			smjerIzbornik();
 			break;
 		case 5:
-			System.out.println("Program je zavr�io, dovi�enja!");
+			System.out.println("Program je završio, doviđenja!");
 			return;
 		}
 		
