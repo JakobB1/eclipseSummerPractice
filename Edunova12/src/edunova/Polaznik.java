@@ -1,6 +1,6 @@
 package edunova;
 
-public class Polaznik extends Osoba{
+public class Polaznik extends Osoba {
 	
 	private String brojUgovora;
 
