@@ -2,7 +2,7 @@ package edunova;
 
 import java.util.Scanner;
 
-public class UIaz {
+public class Ulaz {
 	
 	public static int ucitajInt(
 			String poruka, 
