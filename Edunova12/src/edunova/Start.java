@@ -7,9 +7,11 @@ import java.util.Scanner;
 public class Start {
 	
 	private List<Smjer> smjerovi;
+	private List<Polaznik> polaznici;
 	
 	public Start() {
 		smjerovi = new ArrayList<Smjer>();
+		polaznici = new ArrayList<Polaznik>();
 		Ulaz.scanner=new Scanner(System.in);
 		glavniIzbornik();
 	}
@@ -30,6 +32,9 @@ public class Start {
 		case 1:
 			smjerIzbornik();
 			break;
+		case 2:
+			polaznikIzbornik();
+			break;	
 		case 5:
 			System.out.println("Program je završio, doviđenja!");
 			return;
@@ -37,8 +42,26 @@ public class Start {
 		
 	}
 	
+	private void polaznikIzbornik() {
+		System.out.println("--------------------");	
+		System.out.println("Podizbornik 2. Polaznici");		
+		System.out.println("Odaberite akciju");
+		System.out.println(" 1. Pregled unesenih polaznika");
+		System.out.println(" 2. Unos novog polaznika");
+		System.out.println(" 3. Promjena postoječeg polaznika");
+		System.out.println(" 4. Brisanje polaznika");
+		System.out.println(" 5. Povratak u prethodni izbornik");
+		polaznikUcitajAkciju();
+		
+	}
+
+	private void polaznikUcitajAkciju() {
+		// TODO Auto-generated method stub
+		
+	}
+
 	///////////
-	//// PO�ETAK SMJER
+	//// POČETAK SMJER
 	///////////
 
 	private void smjerIzbornik() {
@@ -126,7 +149,7 @@ public class Start {
 	}
 	
 	///////////
-	//// PO�ETAK SMJER
+	//// POČETAK SMJER
 	///////////
 
 	public static void main(String[] args) {
