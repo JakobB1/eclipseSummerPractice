@@ -7,7 +7,6 @@ public class Smjer {
 	private int trajanje;
 	private double cijena;
 	private boolean certifikat;
-	
 	public int getSifra() {
 		return sifra;
 	}
@@ -38,5 +37,7 @@ public class Smjer {
 	public void setCertifikat(boolean certifikat) {
 		this.certifikat = certifikat;
 	}
+	
+	
 
 }
