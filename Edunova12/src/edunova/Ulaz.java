@@ -67,7 +67,7 @@ public class Ulaz {
 						scanner.nextLine());
 				if (broj<min || broj>max) {
 					System.out.println("Broj ne smije biti manji od " + min
-							+ " ili ve�i od " + max);
+							+ " ili veći od " + max);
 					continue;
 				}
 				break;
