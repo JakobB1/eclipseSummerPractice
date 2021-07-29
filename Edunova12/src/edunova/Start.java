@@ -19,7 +19,7 @@ public class Start {
 		System.out.println(" IZBORNIK ");
 		System.out.println(" 1. Smjerovi");
 		System.out.println(" 2. Polaznici");
-		System.out.println(" 3. Predava�i");
+		System.out.println(" 3. Predavači");
 		System.out.println(" 4. Grupe");
 		System.out.println(" 5. Izlaz iz programa");
 		ucitajGlavnuAkciju();
@@ -47,7 +47,7 @@ public class Start {
 		System.out.println("Odaberite akciju");
 		System.out.println(" 1. Pregled unesenih smjerova");
 		System.out.println(" 2. Unos novog smjera");
-		System.out.println(" 3. Promjena postoje�eg smjera");
+		System.out.println(" 3. Promjena postoječeg smjera");
 		System.out.println(" 4. Brisanje smjera");
 		System.out.println(" 5. Povratak u prethodni izbornik");
 		smjerUcitajAkciju();
