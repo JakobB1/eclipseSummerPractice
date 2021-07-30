@@ -42,6 +42,10 @@ public class Start {
 		
 	}
 	
+    ///////////
+    //// POČETAK POLAZNIK
+    ///////////
+	
 	private void polaznikIzbornik() {
 		System.out.println("--------------------");	
 		System.out.println("Podizbornik 2. Polaznici");		
@@ -128,8 +132,14 @@ public class Start {
 		}
 		
 		
-	}
+	}	
+	
+    ///////////
+    //// KRAJ POLAZNIK
+    ///////////
 
+	
+	
 	///////////
 	//// POČETAK SMJER
 	///////////
@@ -221,9 +231,10 @@ public class Start {
 	}
 	
 	///////////
-	//// POČETAK SMJER
+	//// KRAJ SMJER
 	///////////
 
+	
 	public static void main(String[] args) {
 		new Start();
 	}
