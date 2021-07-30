@@ -80,6 +80,24 @@ public class Start {
 	}
 	
     private void polaznikPregled() {
+    	polaznikStavke("Pregled unesenih smjerova");
+    	polaznikIzbornik();
+	}
+
+	private void polaznikStavke(String naslov) {
+		System.out.println(naslov);
+		System.out.println("--------------------");
+		if(smjerovi.size()==0) {
+			System.out.println("Nema unesenih polaznika");
+		}else {
+			Polaznik p;
+			for(int i=0;i<polaznici.size();i++) {
+				p= polaznici.get(i);
+				System.out.println((i + 1) + ". " + p.getIme() + 
+						" " + p.getPrezime());
+			}
+		}
+		
 		
 	}
 
