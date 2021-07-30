@@ -76,10 +76,29 @@ public class Start {
 	}
 
 	private void polaznikUnosNovog() {
-		
+		Polaznik p = new Polaznik();
+		p = polaznikPostaviVrijednosti(p);
+		polaznici.add(p);
+		polaznikIzbornik();
 	}
 	
-    private void polaznikPregled() {
+    private Polaznik polaznikPostaviVrijednosti(Polaznik p) {
+    	p.setSifra(Ulaz.ucitajInt("Unesite šifru: ",
+    			"Šifra mora biti cijeli broj",
+    			1, Integer.MAX_VALUE));
+    	p.setIme(Ulaz.ucitajString("Unesi ime polaznika: ",
+    			"Ime obavezno"));
+    	p.setPrezime(Ulaz.ucitajString("Unesi prezime polaznika: ",
+    			"Prezime obavezno"));
+    	p.setEmail(Ulaz.ucitajString("Unesi email polaznika: ",
+    			"Email obavezan"));
+    	p.setBrojUgovora(Ulaz.ucitajString("Unesi broj ugovora polaznika: ",
+    			"Broj ugovora obavezan"));
+    	
+    	return p;
+	}
+
+	private void polaznikPregled() {
     	polaznikStavke("Pregled unesenih smjerova");
     	polaznikIzbornik();
 	}
