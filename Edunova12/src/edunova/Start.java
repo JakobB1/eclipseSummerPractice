@@ -56,13 +56,38 @@ public class Start {
 	}
 
 	private void polaznikUcitajAkciju() {
-		// TODO Auto-generated method stub
+		switch(Ulaz.ucitajInt("Odaberite akciju: ", 
+				"Niste unijeli cijeli broj", 1, 5)) {
+		case 1 -> polaznikPregled();
+		case 2 -> polaznikUnosNovog();
+		case 3 -> polaznikPromjena();
+		case 4 -> polaznikBrisanje();
+		case 5 -> glavniIzbornik();
+		}
+		
+	}
+
+	private void polaznikBrisanje() {
+		
+	}
+
+	private void polaznikPromjena() {
+		
+	}
+
+	private void polaznikUnosNovog() {
+		
+	}
+	
+    private void polaznikPregled() {
 		
 	}
 
 	///////////
 	//// POČETAK SMJER
 	///////////
+
+	
 
 	private void smjerIzbornik() {
 		System.out.println("--------------------");	
