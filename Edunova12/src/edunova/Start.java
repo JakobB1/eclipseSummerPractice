@@ -68,11 +68,21 @@ public class Start {
 	}
 
 	private void polaznikBrisanje() {
-		
+		polaznikStavke("Trenutno dostupno u aplikaciji");
+		int redniBroj = Ulaz.ucitajInt("Odaberite redni broj za brisanje: ", 
+				"Niste unijeli cijeli broj", 1, polaznici.size());
+		polaznici.remove(redniBroj-1);
+		polaznikIzbornik();
 	}
 
 	private void polaznikPromjena() {
-		
+		polaznikStavke("Trenutno dostupno u aplikaciji");
+		int redniBroj = Ulaz.ucitajInt("Odaberite redni broj za promjenu: ", 
+				"Niste unijeli cijeli broj", 1, polaznici.size());
+		Polaznik polaznikZaPromjenu = polaznici.get(redniBroj-1);
+		polaznikZaPromjenu = polaznikPostaviVrijednosti(polaznikZaPromjenu);
+		polaznici.set(redniBroj-1, polaznikZaPromjenu);
+		polaznikIzbornik();
 	}
 
 	private void polaznikUnosNovog() {
