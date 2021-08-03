@@ -44,11 +44,9 @@ public class Start {
     //// POČETAK KORISNIK
     ///////////
 
-	private void korisnikIzbornik() {
-		
-	}
 
-	private void smjerIzbornik() {
+	
+	private void korisnikIzbornik() {
 		System.out.println("--------------------");	
 		System.out.println("Podizbornik 1. Korisnici");		
 		System.out.println("Odaberite akciju");
