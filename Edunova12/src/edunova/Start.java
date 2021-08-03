@@ -8,10 +8,12 @@ public class Start {
 	
 	private List<Smjer> smjerovi;
 	private List<Polaznik> polaznici;
+	private List<Predavac> predavaci;
 	
 	public Start() {
 		smjerovi = new ArrayList<Smjer>();
 		polaznici = new ArrayList<Polaznik>();
+		predavaci = new ArrayList<Predavac>();
 		Ulaz.scanner=new Scanner(System.in);
 		glavniIzbornik();
 	}
@@ -35,6 +37,9 @@ public class Start {
 		case 2:
 			polaznikIzbornik();
 			break;	
+		case 3:
+			predavacIzbornik();
+			break;	
 		case 5:
 			System.out.println("Program je završio, doviđenja!");
 			return;
@@ -42,9 +47,13 @@ public class Start {
 		
 	}
 	
-    ///////////
+    
+
+	///////////
     //// POČETAK POLAZNIK
     ///////////
+	
+	
 	
 	private void polaznikIzbornik() {
 		System.out.println("--------------------");	
@@ -145,7 +154,7 @@ public class Start {
 	///////////
 
 	
-
+	
 	private void smjerIzbornik() {
 		System.out.println("--------------------");	
 		System.out.println("Podizbornik 1. Smjer");		
@@ -230,9 +239,30 @@ public class Start {
 		
 	}
 	
-	///////////
-	//// KRAJ SMJER
-	///////////
+    ///////////
+    //// KRAJ SMJER
+    ///////////
+
+
+
+    ///////////
+    //// POČETAK PREDAVAČ
+    ///////////
+	
+	
+	
+	private void predavacIzbornik() {
+		System.out.println("--------------------");	
+		System.out.println("Podizbornik 3. Predavaci");		
+		System.out.println("Odaberite akciju");
+		System.out.println(" 1. Pregled unesenih predavaca");
+		System.out.println(" 2. Unos novog predavaca");
+		System.out.println(" 3. Promjena postoječeg predavaca");
+		System.out.println(" 4. Brisanje predavaca");
+		System.out.println(" 5. Povratak u prethodni izbornik");
+		smjerUcitajAkciju();
+	}
+	
 
 	
 	public static void main(String[] args) {
