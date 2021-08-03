@@ -260,11 +260,38 @@ public class Start {
 		System.out.println(" 3. Promjena postoječeg predavaca");
 		System.out.println(" 4. Brisanje predavaca");
 		System.out.println(" 5. Povratak u prethodni izbornik");
-		smjerUcitajAkciju();
+		predavacUcitajAkciju();
 	}
 	
 
 	
+	private void predavacUcitajAkciju() {
+		switch(Ulaz.ucitajInt("Odaberite akciju: ", 
+				"Niste unijeli cijeli broj", 1, 5)) {
+		case 1 -> predavacPregled();
+		case 2 -> predavacUnosNovog();
+		case 3 -> predavacPromjena();
+		case 4 -> predavacBrisanje();
+		case 5 -> glavniIzbornik();
+		}
+	}
+
+	private void predavacBrisanje() {
+		
+	}
+
+	private void predavacPromjena() {
+		
+	}
+
+	private void predavacUnosNovog() {
+		
+	}
+
+	private void predavacPregled() {
+		
+	}
+
 	public static void main(String[] args) {
 		new Start();
 	}
