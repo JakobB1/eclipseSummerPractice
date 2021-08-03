@@ -105,6 +105,7 @@ public class Start {
     			"Prezime obavezno"));
     	k.setEmail(Ulaz.ucitajString("Unesi email korisnika: ",
     			"Email obavezan"));
+    	k.setBrojClanskeKartice(Ulaz.ucitajString("Unesi broj kartice korisnika: ", "Broj kartice nije obavezan"));
     	return k;
 	} 
 

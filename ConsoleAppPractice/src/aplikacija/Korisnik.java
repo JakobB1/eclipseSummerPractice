@@ -5,7 +5,7 @@ public class Korisnik {
 	private int sifra;
 	private String ime;
 	private String prezime;
-	private int brojClanskeKartice;
+	private String brojClanskeKartice;
 	private String email;
 	
 	public int getSifra() {
@@ -26,11 +26,11 @@ public class Korisnik {
 	public void setPrezime(String prezime) {
 		this.prezime = prezime;
 	}
-	public int getBrojClanskeKartice() {
+	public String getBrojClanskeKartice() {
 		return brojClanskeKartice;
 	}
-	public void setBrojClanskeKartice(int brojClanskeKartice) {
-		this.brojClanskeKartice = brojClanskeKartice;
+	public void setBrojClanskeKartice(String string) {
+		this.brojClanskeKartice = string;
 	}
 	public String getEmail() {
 		return email;
