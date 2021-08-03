@@ -277,11 +277,21 @@ public class Start {
 	}
 
 	private void predavacBrisanje() {
-		
+		predavacStavke("Trenutno dostupno u aplikaciji");
+		int redniBroj = Ulaz.ucitajInt("Odaberite redni broj za brisanje: ", 
+				"Niste unijeli cijeli broj", 1, predavaci.size());
+		predavaci.remove(redniBroj-1);
+		predavacIzbornik();
 	}
 
 	private void predavacPromjena() {
-		
+		predavacStavke("Trenutno dostupno u aplikaciji");
+		int redniBroj = Ulaz.ucitajInt("Odaberite redni broj za promjenu: ", 
+				"Niste unijeli cijeli broj", 1, predavaci.size());
+		Predavac predavacZaPromjenu = predavaci.get(redniBroj-1);
+		predavacZaPromjenu = predavacPostaviVrijednosti(predavacZaPromjenu);
+		predavaci.set(redniBroj-1, predavacZaPromjenu);
+		predavacIzbornik();
 	}
 
 	private void predavacUnosNovog() {
