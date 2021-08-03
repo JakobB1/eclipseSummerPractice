@@ -285,7 +285,26 @@ public class Start {
 	}
 
 	private void predavacUnosNovog() {
-		
+		Predavac p = new Predavac();
+		p = predavacPostaviVrijednosti(p);
+		predavaci.add(p);
+		predavacIzbornik();
+	}
+
+	private Predavac predavacPostaviVrijednosti(Predavac p) {
+		p.setSifra(Ulaz.ucitajInt("Unesite šifru: ",
+    			"Šifra mora biti cijeli broj",
+    			1, Integer.MAX_VALUE));
+    	p.setIme(Ulaz.ucitajString("Unesi ime predavaca: ",
+    			"Ime obavezno"));
+    	p.setPrezime(Ulaz.ucitajString("Unesi prezime predavaca: ",
+    			"Prezime obavezno"));
+    	p.setEmail(Ulaz.ucitajString("Unesi email predavaca: ",
+    			"Email obavezan"));
+    	p.setIban(Ulaz.ucitajString("Unesi broj Ibana predavac: ",
+    			"Broj ibana obavezan"));
+    	
+    	return p;
 	}
 
 	private void predavacPregled() {
