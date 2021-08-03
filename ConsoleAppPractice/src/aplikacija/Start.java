@@ -2,6 +2,7 @@ package aplikacija;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Start {
 	
@@ -9,6 +10,7 @@ public class Start {
 	
 	public Start() {
 		korisnici = new ArrayList<Korisnik>();
+		Ulaz.scanner= new Scanner(System.in);
 		glavniIzbornik();
 	}
 	
@@ -29,7 +31,8 @@ public class Start {
 		case 1: 
 			korisnikIzbornik();
 			break;
-		case 5: 
+		case 5:
+			System.out.println("Program je zavrsio, dovidenja!");
 			return;
 		}
 		
@@ -99,7 +102,7 @@ public class Start {
     	k.setEmail(Ulaz.ucitajString("Unesi email korisnika: ",
     			"Email obavezan"));
     	return k;
-	}
+	} 
 
 	private void korisnikPregled() {
 		korisnikStavke("Pregled unesenih smjerova");
