@@ -289,6 +289,23 @@ public class Start {
 	}
 
 	private void predavacPregled() {
+		predavacStavke("Pregled unesenih smjerova");
+		predavacIzbornik();
+	}
+
+	private void predavacStavke(String naslov) {
+		System.out.println(naslov);
+		System.out.println("--------------------");
+		if(predavaci.size()==0) {
+			System.out.println("Nema unesenih predavaca");
+		}else {
+			Predavac p;
+			for(int i=0;i<predavaci.size();i++) {
+				p= predavaci.get(i);
+				System.out.println((i + 1) + ". " + p.getIme() + 
+						" " + p.getPrezime());
+			}
+		}
 		
 	}
 
