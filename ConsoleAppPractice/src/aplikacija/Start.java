@@ -55,7 +55,6 @@ public class Start {
     ///////////
 
 
-	
 	private void korisnikIzbornik() {
 		System.out.println("--------------------");	
 		System.out.println("Podizbornik 1. Korisnici");		
