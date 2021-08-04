@@ -220,7 +220,8 @@ public class Start {
 	}
 
 	private void djelatnikPregled() {
-		
+		djelatnikStavke("Pregled unesenih smjerova");
+		djelatnikIzbornik();
 	}
 
 	public static void main(String[] args) {
