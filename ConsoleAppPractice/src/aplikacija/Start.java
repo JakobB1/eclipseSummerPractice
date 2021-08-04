@@ -294,6 +294,8 @@ public class Start {
 		r.setSifra(Ulaz.ucitajInt("Unesite sifru: ",
     			"Sifra mora biti cijeli broj",
     			1, Integer.MAX_VALUE));
+		r.setBrojracuna(Ulaz.ucitajString("Unesi broj racuna :",
+				"Broj racuna obavezan"));
 		r.setCijena(Ulaz.ucitajDouble("Unesi cijenu: ", 
 				"Cijena mora biti decimalni broj", 0, 100000));
     	r.setDatumpocetka(Ulaz.ucitajDatum("Unesi datrum pocetka: "));
