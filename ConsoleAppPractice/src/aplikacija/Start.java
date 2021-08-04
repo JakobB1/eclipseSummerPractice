@@ -7,9 +7,11 @@ import java.util.Scanner;
 public class Start {
 	
 	private List<Korisnik> korisnici;
+	private List<Djelatnik> djelatnici;
 	
 	public Start() {
 		korisnici = new ArrayList<Korisnik>();
+		djelatnici = new ArrayList<Djelatnik>();
 		Ulaz.scanner= new Scanner(System.in);
 		glavniIzbornik();
 	}
@@ -31,6 +33,9 @@ public class Start {
 		case 1: 
 			korisnikIzbornik();
 			break;
+		case 2: 
+			djelatnikIzbornik();
+			break;
 		case 5:
 			System.out.println("Program je zavrsio, dovidenja!");
 			return;
@@ -40,8 +45,8 @@ public class Start {
 	
 	
 	
-    ///////////
-    //// POČETAK KORISNIK
+	///////////
+    //// POCETAK KORISNIK
     ///////////
 
 
@@ -55,10 +60,10 @@ public class Start {
 		System.out.println(" 3. Promjena postojeceg korisnika");
 		System.out.println(" 4. Brisanje korisnika");
 		System.out.println(" 5. Povratak u prethodni izbornik");
-		smjerUcitajAkciju();
+		korisnikUcitajAkciju();
 	}
 
-	private void smjerUcitajAkciju() {
+	private void korisnikUcitajAkciju() {
 		switch(Ulaz.ucitajInt("Odaberite akciju: ", 
 				"Niste unijeli cijeli broj", 1, 5)) {
 		case 1 -> korisnikPregled();
@@ -129,9 +134,88 @@ public class Start {
 		}
 	}
 	
+	
+	
     ///////////
     //// KRAJ KORISNIK
     ///////////
+	
+	
+	
+    ///////////
+    //// POCETAK DJELATNIK
+    ///////////
+	
+    private void djelatnikIzbornik() {
+    	System.out.println("--------------------");	
+		System.out.println("Podizbornik 2. Djelatnici");		
+		System.out.println("Odaberite akciju");
+		System.out.println(" 1. Pregled unesenih djelatnika");
+		System.out.println(" 2. Unos novog djelatnika");
+		System.out.println(" 3. Promjena postojeceg djelatnika");
+		System.out.println(" 4. Brisanje djelatnika");
+		System.out.println(" 5. Povratak u prethodni izbornik");
+		djelatnikUcitajAkciju();
+	}
+	
+	private void djelatnikUcitajAkciju() {
+		switch(Ulaz.ucitajInt("Odaberite akciju: ", 
+				"Niste unijeli cijeli broj", 1, 5)) {
+		case 1 -> djelatnikPregled();
+		case 2 -> djelatnikUnosNovog();
+		case 3 -> djelatnikPromjena();
+		case 4 -> djelatnikBrisanje();
+		case 5 -> glavniIzbornik();
+		}
+	}
+
+	private void djelatnikBrisanje() {
+		djelatnikStavke("Pregled unesenih smjerova");
+		djelatnikIzbornik();
+	}
+
+	private void djelatnikStavke(String naslov) {
+		System.out.println(naslov);
+		System.out.println("--------------------");
+		if(djelatnici.size()==0) {
+			System.out.println("Nema unesenih djelatnika");
+		}else {
+			Djelatnik d;
+			for(int i=0;i<djelatnici.size();i++) {
+				d= djelatnici.get(i);
+				System.out.println((i + 1) + ". " + d.getIme() + 
+						" " + d.getPrezime () + 
+						" " + d.getPcshop());
+			}	
+		}
+	}
+
+	private void djelatnikPromjena() {
+		
+	}
+
+	private void djelatnikUnosNovog() {
+		Djelatnik d = new Djelatnik();
+		d = djelatnikPostaviVrijednosti(d);
+		djelatnici.add(d);
+		djelatnikIzbornik();
+	}
+
+	private Djelatnik djelatnikPostaviVrijednosti(Djelatnik d) {
+		d.setSifra(Ulaz.ucitajInt("Unesite šifru: ",
+    			"Šifra mora biti cijeli broj",
+    			1, Integer.MAX_VALUE));
+    	d.setIme(Ulaz.ucitajString("Unesi ime predavaca: ",
+    			"Ime obavezno"));
+    	d.setPrezime(Ulaz.ucitajString("Unesi prezime predavaca: ",
+    			"Prezime obavezno"));
+    	d.setPcshop(Ulaz.ucitajString("Unesi ime PC Shop:", "Ime obavezno"));
+		return d;
+	}
+
+	private void djelatnikPregled() {
+		
+	}
 
 	public static void main(String[] args) {
 		new Start(); 
