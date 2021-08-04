@@ -306,7 +306,8 @@ public class Start {
 						" " + r.getCijena() + 
 						" " + r.getDatumpocetka() + 
 						" " + r.getDjelatnici() +
-						" " + r.getKorisnici());
+						" " + r.getKorisnici() +
+						" " + r.isCertifikat());
 			}	
 		}
 	}
