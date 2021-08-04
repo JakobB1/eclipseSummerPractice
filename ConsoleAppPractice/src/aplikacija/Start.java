@@ -216,7 +216,7 @@ public class Start {
 	}
 
 	private Djelatnik djelatnikPostaviVrijednosti(Djelatnik d) {
-		d.setSifra(Ulaz.ucitajInt("Unesite šifru: ",
+		d.setSifra(Ulaz.ucitajInt("Unesite sifru: ",
     			"Šifra mora biti cijeli broj",
     			1, Integer.MAX_VALUE));
     	d.setIme(Ulaz.ucitajString("Unesi ime predavaca: ",
@@ -281,7 +281,7 @@ public class Start {
 	}
 
 	private Racun racunPostaviVrijednosti(Racun r) {
-		r.setSifra(Ulaz.ucitajInt("Unesite šifru: ",
+	    r.setSifra(Ulaz.ucitajInt("Unesite sifru: ",
     			"Šifra mora biti cijeli broj",
     			1, Integer.MAX_VALUE));
 		r.setCijena(Ulaz.ucitajDouble("Unesi cijenu: ", 
@@ -289,6 +289,7 @@ public class Start {
     	r.setDatumpocetka(Ulaz.ucitajDatum("Unesi datrum pocetka: "));
     	r.setCertifikat(Ulaz.ucitajBoolean("Unesite oznaku da li je " 
     			+ "smjer certification: ", "Kriva vrijednost"));
+
 		return r;
 	}
 
