@@ -8,10 +8,12 @@ public class Start {
 	
 	private List<Korisnik> korisnici;
 	private List<Djelatnik> djelatnici;
+	private List<Racun> racuni;
 	
 	public Start() {
 		korisnici = new ArrayList<Korisnik>();
 		djelatnici = new ArrayList<Djelatnik>();
+		racuni = new ArrayList<Racun>();
 		Ulaz.scanner= new Scanner(System.in);
 		glavniIzbornik();
 	}

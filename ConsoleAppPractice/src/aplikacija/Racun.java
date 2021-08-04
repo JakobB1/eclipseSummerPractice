@@ -1,5 +1,6 @@
 package aplikacija;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -10,10 +11,10 @@ public class Racun {
 	private String brojracuna;
 	private double cijena;
 	private boolean certifikat;
-	private List<Korisnik> korisnici;
-	private List<Djelatnik> djelatnici;
-	public int getSifra() {
-		
+	private List<Korisnik> korisnici = new ArrayList<Korisnik>();
+	private List<Djelatnik> djelatnici = new ArrayList<Djelatnik>();
+	
+	public int getSifra() {	
 		return sifra;
 	}
 	public void setSifra(int sifra) {
