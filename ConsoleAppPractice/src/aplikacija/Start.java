@@ -223,6 +223,10 @@ public class Start {
 		djelatnikStavke("Pregled unesenih smjerova");
 		djelatnikIzbornik();
 	}
+	
+    ///////////
+    //// KRAJ DJELATNIK
+    ///////////
 
 	public static void main(String[] args) {
 		new Start(); 
