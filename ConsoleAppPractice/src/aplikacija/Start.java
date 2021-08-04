@@ -284,7 +284,11 @@ public class Start {
 		r.setSifra(Ulaz.ucitajInt("Unesite šifru: ",
     			"Šifra mora biti cijeli broj",
     			1, Integer.MAX_VALUE));
-    	r.setDatumpocetka(null);
+		r.setCijena(Ulaz.ucitajDouble("Unesi cijenu: ", 
+				"Cijena mora biti decimalni broj", 0, 100000));
+    	r.setDatumpocetka(Ulaz.ucitajDatum("Unesi datrum pocetka: "));
+    	r.setCertifikat(Ulaz.ucitajBoolean("Unesite oznaku da li je " 
+    			+ "smjer certification: ", "Kriva vrijednost"));
 		return r;
 	}
 
@@ -305,8 +309,6 @@ public class Start {
 				System.out.println((i + 1) + ". " + r.getBrojracuna() + 
 						" " + r.getCijena() + 
 						" " + r.getDatumpocetka() + 
-						" " + r.getDjelatnici() +
-						" " + r.getKorisnici() +
 						" " + r.isCertifikat());
 			}	
 		}
