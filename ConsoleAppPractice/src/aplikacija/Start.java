@@ -266,11 +266,21 @@ public class Start {
 	}
 
 	private void racunBrisanje() {
-		
+		racunStavke("Trenutno dostupno u aplikaciji");
+		int redniBroj = Ulaz.ucitajInt("Odaberite redni broj za brisanje: ", 
+				"Niste unijeli cijeli broj", 1, racuni.size());
+		racuni.remove(redniBroj-1);
+		racunIzbornik();
 	}
 
 	private void racunPromjena() {
-		
+		racunStavke("Trenutno dostupno u aplikaciji");
+		int redniBroj = Ulaz.ucitajInt("Odaberite redni broj za promjenu: ", 
+				"Niste unijeli cijeli broj", 1, racuni.size());
+		Racun racunZaPromjenu = racuni.get(redniBroj-1);
+		racunZaPromjenu = racunPostaviVrijednosti(racunZaPromjenu);
+		racuni.set(redniBroj-1, racunZaPromjenu);
+		racunIzbornik();
 	}
 
 	private void racunUnosNovog() {
