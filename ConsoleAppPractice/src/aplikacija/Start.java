@@ -291,8 +291,8 @@ public class Start {
 	}
 
 	private Racun racunPostaviVrijednosti(Racun r) {
-	    r.setSifra(Ulaz.ucitajInt("Unesite sifru: ",
-    			"sifra mora biti cijeli broj",
+		r.setSifra(Ulaz.ucitajInt("Unesite sifru: ",
+    			"Šifra mora biti cijeli broj",
     			1, Integer.MAX_VALUE));
 		r.setCijena(Ulaz.ucitajDouble("Unesi cijenu: ", 
 				"Cijena mora biti decimalni broj", 0, 100000));
@@ -304,7 +304,7 @@ public class Start {
 	}
 
 	private void racunPregled() {
-		racunStavke("Pregled unesenih smjerova");
+		racunStavke("Pregled unesenih racuna");
 		racunIzbornik();
 	}
 
