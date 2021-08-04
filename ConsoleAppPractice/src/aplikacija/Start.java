@@ -274,7 +274,18 @@ public class Start {
 	}
 
 	private void racunUnosNovog() {
-		
+		Racun r = new Racun();
+		r = racunPostaviVrijednosti(r);
+		racuni.add(r);
+		racunIzbornik();
+	}
+
+	private Racun racunPostaviVrijednosti(Racun r) {
+		r.setSifra(Ulaz.ucitajInt("Unesite šifru: ",
+    			"Šifra mora biti cijeli broj",
+    			1, Integer.MAX_VALUE));
+    	r.setDatumpocetka(null);
+		return r;
 	}
 
 	private void racunPregled() {
