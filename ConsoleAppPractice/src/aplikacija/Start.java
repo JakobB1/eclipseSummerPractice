@@ -23,8 +23,8 @@ public class Start {
 		System.out.println(" IZBORNIK ");
 		System.out.println(" 1. Korisnici");
 		System.out.println(" 2. Djelatnici");
-		System.out.println(" 3. Proizvodi");
-		System.out.println(" 4. Racuni");
+		System.out.println(" 3. Racuni");
+		System.out.println(" 4. Proizvodi");
 		System.out.println(" 5. Izlaz iz programa");
 		
 		ucitajGlavnuAkciju();
@@ -38,6 +38,9 @@ public class Start {
 		case 2: 
 			djelatnikIzbornik();
 			break;
+		case 3: 
+			racunIzbornik();
+			break;
 		case 5:
 			System.out.println("Program je zavrsio, dovidenja!");
 			return;
@@ -46,7 +49,7 @@ public class Start {
 	}
 	
 	
-	
+
 	///////////
     //// POCETAK KORISNIK
     ///////////
@@ -232,6 +235,70 @@ public class Start {
     ///////////
     //// KRAJ DJELATNIK
     ///////////
+	
+	
+	
+    ///////////
+    //// POCETAK RACUN
+    ///////////
+	
+    private void racunIzbornik() {
+    	System.out.println("--------------------");	
+		System.out.println("Podizbornik 3. Racuni");		
+		System.out.println("Odaberite akciju");
+		System.out.println(" 1. Pregled unesenih racuna");
+		System.out.println(" 2. Unos novog racuna");
+		System.out.println(" 3. Promjena postojeceg racuna");
+		System.out.println(" 4. Brisanje racuna");
+		System.out.println(" 5. Povratak u prethodni izbornik");
+		racunUcitajAkciju();
+	}
+
+	private void racunUcitajAkciju() {
+		switch(Ulaz.ucitajInt("Odaberite akciju: ", 
+				"Niste unijeli cijeli broj", 1, 5)) {
+		case 1 -> racunPregled();
+		case 2 -> racunUnosNovog();
+		case 3 -> racunPromjena();
+		case 4 -> racunBrisanje();
+		case 5 -> glavniIzbornik();
+		}
+	}
+
+	private void racunBrisanje() {
+		
+	}
+
+	private void racunPromjena() {
+		
+	}
+
+	private void racunUnosNovog() {
+		
+	}
+
+	private void racunPregled() {
+		racunStavke("Pregled unesenih smjerova");
+		racunIzbornik();
+	}
+
+	private void racunStavke(String naslov) {
+		System.out.println(naslov);
+		System.out.println("--------------------");
+		if(racuni.size()==0) {
+			System.out.println("Nema unesenih racuna");
+		}else {
+			Racun r;
+			for(int i=0;i<racuni.size();i++) {
+				r= racuni.get(i);
+				System.out.println((i + 1) + ". " + r.getBrojracuna() + 
+						" " + r.getCijena() + 
+						" " + r.getDatumpocetka() + 
+						" " + r.getDjelatnici() +
+						" " + r.getKorisnici());
+			}	
+		}
+	}
 
 	public static void main(String[] args) {
 		new Start(); 
