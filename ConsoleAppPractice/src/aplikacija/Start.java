@@ -170,7 +170,10 @@ public class Start {
 	}
 
 	private void djelatnikBrisanje() {
-		djelatnikStavke("Pregled unesenih smjerova");
+		djelatnikStavke("Trenutno dostupno u aplikaciji");
+		int redniBroj = Ulaz.ucitajInt("Odaberite redni broj za brisanje: ", 
+				"Niste unijeli cijeli broj", 1, djelatnici.size());
+		djelatnici.remove(redniBroj-1);
 		djelatnikIzbornik();
 	}
 
