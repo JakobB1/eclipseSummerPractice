@@ -1,6 +1,7 @@
 package aplikacija;
 
 import java.util.Date;
+import java.util.List;
 
 public class Racun {
 	
@@ -8,7 +9,53 @@ public class Racun {
 	private Date datumpocetka;
 	private String brojracuna;
 	private double cijena;
-	private Korisnik korisnici;
-	private Djelatnik djelatnici;
+	private boolean certifikat;
+	private List<Korisnik> korisnici;
+	private List<Djelatnik> djelatnici;
+	public int getSifra() {
+		
+		return sifra;
+	}
+	public void setSifra(int sifra) {
+		this.sifra = sifra;
+	}
+	public Date getDatumpocetka() {
+		return datumpocetka;
+	}
+	public void setDatumpocetka(Date datumpocetka) {
+		this.datumpocetka = datumpocetka;
+	}
+	public String getBrojracuna() {
+		return brojracuna;
+	}
+	public void setBrojracuna(String brojracuna) {
+		this.brojracuna = brojracuna;
+	}
+	public double getCijena() {
+		return cijena;
+	}
+	public void setCijena(double cijena) {
+		this.cijena = cijena;
+	}
+	public boolean isCertifikat() {
+		return certifikat;
+	}
+	public void setCertifikat(boolean certifikat) {
+		this.certifikat = certifikat;
+	}
+	public List<Korisnik> getKorisnici() {
+		return korisnici;
+	}
+	public void setKorisnici(List<Korisnik> korisnici) {
+		this.korisnici = korisnici;
+	}
+	public List<Djelatnik> getDjelatnici() {
+		return djelatnici;
+	}
+	public void setDjelatnici(List<Djelatnik> djelatnici) {
+		this.djelatnici = djelatnici;
+	}
+	
+	
 
 }
