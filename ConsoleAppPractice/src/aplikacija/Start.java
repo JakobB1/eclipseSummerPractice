@@ -292,7 +292,7 @@ public class Start {
 
 	private Racun racunPostaviVrijednosti(Racun r) {
 	    r.setSifra(Ulaz.ucitajInt("Unesite sifru: ",
-    			"Šifra mora biti cijeli broj",
+    			"sifra mora biti cijeli broj",
     			1, Integer.MAX_VALUE));
 		r.setCijena(Ulaz.ucitajDouble("Unesi cijenu: ", 
 				"Cijena mora biti decimalni broj", 0, 100000));
