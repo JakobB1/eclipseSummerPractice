@@ -216,7 +216,7 @@ public class Start {
 
 	private Djelatnik djelatnikPostaviVrijednosti(Djelatnik d) {
 		d.setSifra(Ulaz.ucitajInt("Unesite sifru: ",
-    			"Šifra mora biti cijeli broj",
+    			"Sifra mora biti cijeli broj",
     			1, Integer.MAX_VALUE));
     	d.setIme(Ulaz.ucitajString("Unesi ime predavaca: ",
     			"Ime obavezno"));
