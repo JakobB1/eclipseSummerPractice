@@ -57,8 +57,7 @@ public class Start {
 	///////////
     //// POCETAK KORISNIK
     ///////////
-
-
+	
 	private void korisnikIzbornik() {
 		System.out.println("--------------------");	
 		System.out.println("Podizbornik 1. Korisnici");		
@@ -141,8 +140,6 @@ public class Start {
 			}	
 		}
 	}
-	
-	
 	
     ///////////
     //// KRAJ KORISNIK
@@ -329,8 +326,6 @@ public class Start {
 			}	
 		}
 	}
-
-	
 	
     ///////////
     //// KRAJ RACUN
@@ -422,7 +417,6 @@ public class Start {
 			}	
 		}
 	}
-
 	
     ///////////
     //// KRAJ RACUN
