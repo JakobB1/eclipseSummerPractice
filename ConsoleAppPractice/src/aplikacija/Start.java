@@ -367,7 +367,11 @@ public class Start {
 	}
 
 	private void proizvodBrisanje() {
-		
+		proizvodStavke("Trenutno dostupno u aplikaciji");
+		int redniBroj = Ulaz.ucitajInt("Odaberite redni broj za brisanje: ", 
+				"Niste unijeli cijeli broj", 1, proizvodi.size());
+		proizvodi.remove(redniBroj-1);
+		proizvodIzbornik();
 	}
 
 	private void proizvodPromjena() {
