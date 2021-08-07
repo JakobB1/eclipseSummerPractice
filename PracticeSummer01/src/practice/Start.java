@@ -20,6 +20,12 @@ public class Start {
 		 System.out.println(" 3. Racuni");
 		 System.out.println(" 4. Proizvodi");
 		 System.out.println(" 5. Izlaz iz programa");
+		 
+		 ucitajGlavnuAkciju();
+	}
+
+	private void ucitajGlavnuAkciju() {
+		
 	}
 
 	public static void main(String[] args) {
