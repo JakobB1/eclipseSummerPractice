@@ -80,4 +80,22 @@ public class Ulaz {
 		
 		return broj;
 	}
-}
+	
+	
+	
+	
+	public static boolean ucitajBoolean(String poruka, String greska) {
+		String s;
+		while(true) {
+			System.out.print(poruka);
+			s=scanner.nextLine();
+			if(s.trim().toLowerCase().equals("da")) {
+				return true;
+			}
+			if(s.trim().toLowerCase().equals("ne")) {
+				return false;
+			}
+			System.out.println(greska + " (unos da/ne)");
+		}
+	}
+}	
