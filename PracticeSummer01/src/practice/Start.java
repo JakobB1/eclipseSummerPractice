@@ -65,11 +65,21 @@ public class Start {
 	}
 
 	private void korisnikBrisanje() {
-		
+		korisnikStavke("Trenutno dostupno u aplikaciji");
+		int redniBroj = Ulaz.ucitajInt("Odaberite redni broj za brisanje: ", 
+				"Niste unijeli cijeli broj", 1, korisnici.size());
+		korisnici.remove(redniBroj-1);
+		korisnikIzbornik();
 	}
 
 	private void korisnikPromjena() {
-		
+		korisnikStavke("Trenutno dostupno u aplikaciji");
+		int redniBroj = Ulaz.ucitajInt("Odaberite redni broj za promjenu: ", 
+				"Niste unijeli cijeli broj", 1, korisnici.size());
+		Korisnik korisnikZaPromjenu = korisnici.get(redniBroj-1);
+		korisnikZaPromjenu = korisnikPostaviVrijednosti(korisnikZaPromjenu);
+		korisnici.set(redniBroj-1, korisnikZaPromjenu);
+		korisnikIzbornik();
 	}
 
 	private void korisnikUnosNovog() {
@@ -112,7 +122,11 @@ public class Start {
 			}	
 		}
 	}
-
+	
+    ///////////
+    //// KRAJ KORISNIK
+    ///////////
+	
 	public static void main(String[] args) {
 		new Start();
 	}
