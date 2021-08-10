@@ -73,7 +73,24 @@ public class Start {
 	}
 
 	private void korisnikUnosNovog() {
-		
+		Korisnik k = new Korisnik();
+		k = korisnikPostaviVrijednosti(k);
+		korisnici.add(k);
+		korisnikIzbornik();
+	}
+
+	private Korisnik korisnikPostaviVrijednosti(Korisnik k) {
+		k.setSifra(Ulaz.ucitajInt("Unesite sifru: ",
+    			"sifra mora biti cijeli broj",
+    			1, Integer.MAX_VALUE));
+    	k.setIme(Ulaz.ucitajString("Unesi ime korisnika: ",
+    			"Ime obavezno"));
+    	k.setPrezime(Ulaz.ucitajString("Unesi prezime korisnika: ",
+    			"Prezime obavezno"));
+    	k.setEmail(Ulaz.ucitajString("Unesi email korisnika: ",
+    			"Email obavezan"));
+    	k.setBrojClanskeKartice(Ulaz.ucitajString("Unesi broj kartice korisnika: ", "Broj kartice nije obavezan"));
+    	return k;
 	}
 
 	private void korisnikPregled() {
