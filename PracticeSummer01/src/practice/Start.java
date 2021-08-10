@@ -42,13 +42,14 @@ public class Start {
 	///////////
 	
 	private void korisnikIzbornik() {
-		System.out.println("Podizbornik 1. Korisnik");
+		System.out.println("--------------------");	
+		System.out.println("Podizbornik 1. Korisnici");		
 		System.out.println("Odaberite akciju");
 		System.out.println(" 1. Pregled unesenih korisnika");
 		System.out.println(" 2. Unos novog korisnika");
 		System.out.println(" 3. Promjena postojeceg korisnika");
 		System.out.println(" 4. Brisanje korisnika");
-		System.out.println(" 5. Povratak na prethodni izbornik");
+		System.out.println(" 5. Povratak u prethodni izbornik");
 
 		ucitajIzbornikAkciju();
 	}
