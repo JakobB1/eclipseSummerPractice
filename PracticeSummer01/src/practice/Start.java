@@ -56,13 +56,44 @@ public class Start {
 	private void ucitajIzbornikAkciju() {
 		switch(Ulaz.ucitajInt("Odaberite akciju: ", 
 				"Niste unijeli cijeli broj", 1, 5)) {
-		case 1 -> smjerPregled();
+		case 1 -> korisnikPregled();
+		case 2 -> korisnikUnosNovog();
+		case 3 -> korisnikPromjena();
+		case 4 -> korisnikBrisanje();
 		case 5 -> glavniIzbornik();
  		}
 	}
 
-	private void smjerPregled() {
+	private void korisnikBrisanje() {
 		
+	}
+
+	private void korisnikPromjena() {
+		
+	}
+
+	private void korisnikUnosNovog() {
+		
+	}
+
+	private void korisnikPregled() {
+		korisnikStavke("Pregled unesenih smjerova");
+		korisnikIzbornik();
+	}
+
+	private void korisnikStavke(String naslov) {
+		System.out.println(naslov);
+		System.out.println("--------------------");
+		if(korisnici.size()==0) {
+			System.out.println("Nema unesenih korisnika");
+		}else {
+			Korisnik k;
+			for(int i=0;i<korisnici.size();i++) {
+				k= korisnici.get(i);
+				System.out.println((i + 1) + ". " + k.getIme() + 
+						" " + k.getPrezime());
+			}	
+		}
 	}
 
 	public static void main(String[] args) {
