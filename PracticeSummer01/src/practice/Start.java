@@ -42,6 +42,26 @@ public class Start {
 	///////////
 	
 	private void korisnikIzbornik() {
+		System.out.println("Podizbornik 1. Korisnik");
+		System.out.println("Odaberite akciju");
+		System.out.println(" 1. Pregled unesenih korisnika");
+		System.out.println(" 2. Unos novog korisnika");
+		System.out.println(" 3. Promjena postojeceg korisnika");
+		System.out.println(" 4. Brisanje korisnika");
+		System.out.println(" 5. Povratak na prethodni izbornik");
+
+		ucitajIzbornikAkciju();
+	}
+
+	private void ucitajIzbornikAkciju() {
+		switch(Ulaz.ucitajInt("Odaberite akciju: ", 
+				"Niste unijeli cijeli broj", 1, 5)) {
+		case 1 -> smjerPregled();
+		case 5 -> glavniIzbornik();
+ 		}
+	}
+
+	private void smjerPregled() {
 		
 	}
 
