@@ -128,6 +128,14 @@ public class Start {
     //// KRAJ KORISNIK
     ///////////
 	
+	
+	
+    ///////////
+    //// POCETAK DJELATNIK
+    ///////////
+	
+	
+	
 	public static void main(String[] args) {
 		new Start();
 	}
