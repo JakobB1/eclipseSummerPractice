@@ -8,10 +8,12 @@ public class Start {
 
 	private List<Korisnik> korisnici;
 	private List<Djelatnik> djelatnici;
+	private List<Racun> racuni;
 
 	public Start() {
 		korisnici = new ArrayList<Korisnik>();
 		djelatnici = new ArrayList<Djelatnik>();
+		racuni = new ArrayList<Racun>();
 		Ulaz.scanner = new Scanner(System.in);
 		glavniIzbornik();
 	}
@@ -35,6 +37,9 @@ public class Start {
 			break;
 		case 2: 
 			djelatnikIzbornik();
+			break;
+		case 3: 
+			racunIzbornik();
 			break;
 		case 5:
 			System.out.println("Program je zavrsio, dovidenja!");
@@ -232,6 +237,101 @@ public class Start {
     //// POCETAK RACUN
     ///////////
 
+	private void racunIzbornik() {
+    	System.out.println("--------------------");	
+		System.out.println("Podizbornik 3. Racuni");		
+		System.out.println("Odaberite akciju");
+		System.out.println(" 1. Pregled unesenih racuna");
+		System.out.println(" 2. Unos novog racuna");
+		System.out.println(" 3. Promjena postojeceg racuna");
+		System.out.println(" 4. Brisanje racuna");
+		System.out.println(" 5. Povratak u prethodni izbornik");
+		racunUcitajAkciju();
+	}
+
+	private void racunUcitajAkciju() {
+		switch(Ulaz.ucitajInt("Odaberite akciju: ", 
+				"Niste unijeli cijeli broj", 1, 5)) {
+		case 1 -> racunPregled();
+		case 2 -> racunUnosNovog();
+		case 3 -> racunPromjena();
+		case 4 -> racunBrisanje();
+		case 5 -> glavniIzbornik();
+		}
+	}
+
+	private void racunBrisanje() {
+		racunStavke("Trenutno dostupno u aplikaciji");
+		int redniBroj = Ulaz.ucitajInt("Odaberite redni broj za brisanje: ", 
+				"Niste unijeli cijeli broj", 1, racuni.size());
+		racuni.remove(redniBroj-1);
+		racunIzbornik();
+	}
+
+	private void racunPromjena() {
+		racunStavke("Trenutno dostupno u aplikaciji");
+		int redniBroj = Ulaz.ucitajInt("Odaberite redni broj za promjenu: ", 
+				"Niste unijeli cijeli broj", 1, racuni.size());
+		Racun racunZaPromjenu = racuni.get(redniBroj-1);
+		racunZaPromjenu = racunPostaviVrijednosti(racunZaPromjenu);
+		racuni.set(redniBroj-1, racunZaPromjenu);
+		racunIzbornik();
+	}
+
+	private void racunUnosNovog() {
+		Racun r = new Racun();
+		r = racunPostaviVrijednosti(r);
+		racuni.add(r);
+		racunIzbornik();
+	}
+
+	private Racun racunPostaviVrijednosti(Racun r) {
+		r.setSifra(Ulaz.ucitajInt("Unesite sifru: ",
+    			"Sifra mora biti cijeli broj",
+    			1, Integer.MAX_VALUE));
+		r.setBrojracuna(Ulaz.ucitajString("Unesi broj racuna :",
+				"Broj racuna obavezan"));
+		r.setCijena(Ulaz.ucitajDouble("Unesi cijenu: ", 
+				"Cijena mora biti decimalni broj", 0, 100000));
+    	r.setDatumpocetka(Ulaz.ucitajDatum("Unesi datum pocetka: "));
+    	r.setCertifikat(Ulaz.ucitajBoolean("Unesite oznaku da li je " 
+    			+ "smjer certification: ", "Kriva vrijednost"));
+
+		return r;
+	}
+
+	private void racunPregled() {
+		racunStavke("Pregled unesenih racuna");
+		racunIzbornik();
+	}
+
+	private void racunStavke(String naslov) {
+		System.out.println(naslov);
+		System.out.println("--------------------");
+		if(racuni.size()==0) {
+			System.out.println("Nema unesenih racuna");
+		}else {
+			Racun r;
+			for(int i=0;i<racuni.size();i++) {
+				r= racuni.get(i);
+				System.out.println((i + 1) + ". " + r.getBrojracuna() + 
+						" " + r.getCijena() + 
+						" " + r.getDatumpocetka() + 
+						" " + r.isCertifikat());
+			}	
+		}
+	}
+	
+    ///////////
+    //// KRAJ RACUN
+    ///////////
+	
+	
+	
+    ///////////
+    //// POCETAK PROIZVOD
+    ///////////
+	
 	public static void main(String[] args) {
 		new Start();
 	}
