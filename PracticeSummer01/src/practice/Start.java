@@ -219,8 +219,12 @@ public class Start {
 						" " + d.getPrezime () + 
 						" " + d.getPcshop());
 			}	
-		}
+		}	
 	}
+	
+    ///////////
+    //// KRAJ DJELATNIK
+    ///////////
 
 	public static void main(String[] args) {
 		new Start();
